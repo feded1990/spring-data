@@ -19,8 +19,8 @@
                 <td><input name="name" /></td>
             </tr>
             <tr>
-                <td>Shop name:</td>
-                <td><input name="emplNumber" /></td>
+                <td>Employee Number:</td>
+                <td><input name="employee.id" /></td>
             </tr>
             <tr>
                 <td><input type="submit" value="List" /></td>

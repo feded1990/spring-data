@@ -57,8 +57,9 @@ public class ShopServiceImpl implements ShopService {
 			throw new ShopNotFound();
 		
 		updatedShop.setName(shop.getName());
-		/*updatedShop.setEmplNumber(shop.getEmplNumber());*/
         updatedShop.getEmployee().setId(shop.getEmployee().getId());
+        updatedShop.getEmployee().setName(shop.getEmployee().getName());
+        updatedShop.getEmployee().setLastName(shop.getEmployee().getLastName());
 		return updatedShop;
 	}
 
@@ -77,10 +78,10 @@ public class ShopServiceImpl implements ShopService {
         return listShop;
     }
 
-    /*@Override
+    @Override
     public List<Shop> findByNameAndEmplNumber(String name, Integer emplNumber) {
-        List<Shop> listShop = shopRepository.findByNameAndEmplNumber(name, emplNumber);
+        List<Shop> listShop = shopRepository.findByNameAndEmployeeId(name, emplNumber);
         return listShop;
-    }*/
+    }
 
 }

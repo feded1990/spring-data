@@ -1,5 +1,7 @@
 package com.spr.model;
 
+import org.springframework.data.annotation.Reference;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

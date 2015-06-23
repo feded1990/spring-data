@@ -14,6 +14,6 @@ public interface ShopService {
 	public Shop findById(int id);
     public List<Shop> findByName(String name);
     public List<Shop> searchByName(String name);
-    /*List<Shop> findByNameAndEmplNumber(String name, Integer emplNumber);*/
+    List<Shop> findByNameAndEmplNumber(String name, Integer emplNumber);
 
 }

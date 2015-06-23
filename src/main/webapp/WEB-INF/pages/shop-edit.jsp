@@ -18,12 +18,22 @@
                 <td><form:errors path="name" cssStyle="color: red;"/></td>
             </tr>
             <tr>
-                <td>Employees number:</td>
-                <td><form:input path="employee.id" /></td>
+                <td>Employee id:</td>
+                <td><form:input path="employee.id" readonly="readonly" /></td>
                 <td><form:errors path="employee.id" cssStyle="color: red;"/></td>
             </tr>
             <tr>
-                <td><input type="submit" value="Create" /></td>
+                <td>Employee name:</td>
+                <td><form:input path="employee.name" /></td>
+                <td><form:errors path="employee.name" cssStyle="color: red;"/></td>
+            </tr>
+            <tr>
+                <td>Employee last name:</td>
+                <td><form:input path="employee.lastName" /></td>
+                <td><form:errors path="employee.lastName" cssStyle="color: red;"/></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Update" /></td>
                 <td></td>
                 <td></td>
             </tr>

@@ -16,4 +16,6 @@ public interface ShopRepository extends JpaRepository<Shop, Integer> {
 
     @Query(value = "SELECT * FROM shops WHERE name LIKE %:searchTerm%", nativeQuery = true)
     List<Shop> searchByName(@Param("searchTerm") String name);
+
+    List<Shop> findByNameAndEmployeeId(String name, Integer employeeId);
 }

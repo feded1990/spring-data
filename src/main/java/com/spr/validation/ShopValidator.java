@@ -10,7 +10,7 @@ import com.spr.model.Shop;
 @Component
 public class ShopValidator implements Validator {
 	
-	private final static String EMPLOYEES_NUMBER = "emplNumber";
+	private final static String EMPLOYEES_NUMBER = "employee.id";
 
 	@Override
 	public boolean supports(Class<?> clazz) {
@@ -25,10 +25,10 @@ public class ShopValidator implements Validator {
         Integer emplNumber = shop.getEmployee().getId();
 		
 		ValidationUtils.rejectIfEmpty(errors, "name", "shop.name.empty");
-		ValidationUtils.rejectIfEmpty(errors, EMPLOYEES_NUMBER, "shop.emplNumber.empty");
+		ValidationUtils.rejectIfEmpty(errors, EMPLOYEES_NUMBER, "shop.employee.id.empty");
 		
 		if (emplNumber != null && emplNumber < 1)
-			errors.rejectValue(EMPLOYEES_NUMBER, "shop.emplNumber.lessThenOne");
+			errors.rejectValue(EMPLOYEES_NUMBER, "shop.employee.id.lessThenOne");
 
 	}
 

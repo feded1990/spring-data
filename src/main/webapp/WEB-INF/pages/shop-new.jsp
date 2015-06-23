@@ -19,8 +19,8 @@
 </tr>
 <tr>
 <td>Employees number:</td>
-<td><form:input path="emplNumber" /></td>
-<td><form:errors path="emplNumber" cssStyle="color: red;"/></td>
+<td><form:input path="empoyee.id" /></td>
+<td><form:errors path="empoyee.id" cssStyle="color: red;"/></td>
 </tr>
 <tr>
 <td><input type="submit" value="Create" /></td>

@@ -85,11 +85,11 @@ public class ShopController {
     }
 
     @RequestMapping(value="/list-find", method=RequestMethod.POST)
-    public ModelAndView shopListFyndPage(@RequestParam("name") String name, @RequestParam("emplNumber") Integer emplNumber) {
+    public ModelAndView shopListFyndPage(@RequestParam("name") String name, @RequestParam("employee.id") Integer emplNumber) {
         ModelAndView mav = new ModelAndView("shop-list-find");
-        /*List<Shop> shopList = shopService.findByNameAndEmplNumber(name, emplNumber);
+        List<Shop> shopList = shopService.findByNameAndEmplNumber(name, emplNumber);
 
-        mav.addObject("shopList", shopList);*/
+        mav.addObject("shopList", shopList);
         return mav;
     }
 
